@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>仿豆瓣电影网</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mystyle.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="images/brand.png">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">读书<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">音乐</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">电影 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">动作</li>
+                        <li><a href="#first-movie">老炮儿</a></li>
+                        <li><a href="#second-movie">寻龙诀</a></li>
+                        <li><a href="#third-movie">刺客聂隐娘</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">喜剧</li>
+                        <li><a href="#forth-movie">夏洛特烦恼</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">外语</li>
+                        <li><a href="#fifth-movie">神探夏洛克</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="书籍、音乐、电影">
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>  搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">更多 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">小组</a></li>
+                        <li><a href="#">同城</a></li>
+                        <li><a href="#">F  M</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="disabled"><a href="#">市集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="images/slide_01.jpg" alt="...">
+            <div class="carousel-caption">
+                <p>聚义江湖的酣畅淋漓，两代隔阂的凄凉仲景，钢炮儿京片儿，老父亲一代内心根底的倔强和柔软，亲情化解小百姓的热血江湖。</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/slide_02.jpg" alt="...">
+            <div class="carousel-caption">
+                <p>光怪陆离的地下世界，惊险刺激的盗墓冒险，美妙绝伦的美术特效，鬼吹灯之寻龙诀将向你讲述专属于摸金校尉的奇幻故事。</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/slide_03.jpg" alt="...">
+            <div class="carousel-caption">
+                <p>时局动荡，豪强四起。刺客聂隐娘剑术已成，道心未稳，一场本该血腥惨烈的刺杀，因爱生悲，最总以失败告终。</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/slide_04.jpg" alt="...">
+            <div class="carousel-caption">
+               <p>半世荒唐，人生潦倒，夏洛于一场婚礼闹剧之后梦回1992。梦中历经事业高峰之后，在人生弥留之际，悟出珍惜当下，接受现实的道理。</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/slide_05.jpg" alt="...">
+            <div class="carousel-caption">
+                <p>新婚之夜新娘自杀，死者苏生寻仇丈夫。神探夏洛克解密，这到底是一宗灵异恐怖事件？亦或是一场计划周密的谋杀？</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<h2 class="grid-options">最近上映:</h2>
+
+<div class="container" id="summary-container">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="images/photo_01.jpg">
+            <h4>唐人街探案</h4>
+            <button class="btn btn-primary" type="button">选座购票</button>
+        </div>
+        <div class="col-md-3">
+            <img src="images/photo_02.jpg">
+            <h4>小门神</h4>
+            <button class="btn btn-primary" type="button">选座购票</button>
+        </div>
+        <div class="col-md-3">
+            <img src="images/photo_03.jpg">
+            <h4>万万没想到</h4>
+            <button class="btn btn-primary" type="button">选座购票</button>
+        </div>
+        <div class="col-md-3">
+            <img src="images/photo_04.jpg">
+            <h4>一切都好</h4>
+            <button class="btn btn-primary" type="button">选座购票</button>
+        </div>
+    </div>
+</div>
+
+<h2 class="grid-options">影片预告:</h2>
+
+<div class="my-tabs">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" id="tab-list">
+        <li role="presentation" class="active"><a href="#first-movie" aria-controls="first-movie" role="tab" data-toggle="tab">老炮儿</a></li>
+        <li role="presentation"><a href="#second-movie" aria-controls="second-movie" role="tab" data-toggle="tab">寻龙诀</a></li>
+        <li role="presentation"><a href="#third-movie" aria-controls="third-movie" role="tab" data-toggle="tab">刺客聂隐娘</a></li>
+        <li role="presentation"><a href="#forth-movie" aria-controls="forth-movie" role="tab" data-toggle="tab">夏洛特烦恼</a></li>
+        <li role="presentation"><a href="#fifth-movie" aria-controls="fifth-movie" role="tab" data-toggle="tab">神探夏洛克</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="first-movie">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h2 class="feature-heading">老炮儿 <span class="feature-muted">剧情 / 动作 / 犯罪</span></h2>
+                    <p>老炮儿在北京话中，专指提笼遛鸟，无所事事的老混混儿。<br />
+                        六爷（冯小刚 饰）就曾是”横行“老北京的老炮儿之一，如今过着悠闲自得的日子，却不想自己的儿子晓波
+                        （李易峰 饰）被卷入了与“小爷”小飞（吴亦凡 饰）的纠纷中。六爷试图出面摆平这起纠纷，并找来了昔日
+                        老友闷三儿（张涵予 饰）、话匣子（许晴 饰）、灯罩儿（刘桦饰）帮忙，却发现这个时代已经有了一群新的
+                        “话事人”，自己这个顽主的江湖地位已经动摇，并且以往固守的生活方式已经渐渐被时代所抛弃，廉颇老矣尚能饭否？</p>
+                </div>
+                <div class="col-md-5">
+                    <embed src="http://player.youku.com/player.php/sid/XMTM5MDg3NTAyOA==/v.swf" allowFullScreen="true" quality="high" width="400" height="300" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="second-movie">
+            <div class="row feature">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <h2 class="feature-heading">寻龙诀 <span class="feature-muted">动作 / 奇幻 / 冒险</span></h2>
+                    <p>上世纪80年代末，胡八一（陈坤 饰）、王凯旋（黄渤 饰）与Shirley杨（舒淇 饰）在美国打算金盆洗手，本来
+                        叱咤风云的摸金校尉沦为街头小贩被移民局追得满街跑。就在此时，意外发现20年前死在草原上的初恋对象丁
+                        思甜（杨颖 饰）可能还活着，胡八一、王凯旋、Shirley杨决定再入草原千年古墓...</p>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="third-movie">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h2 class="feature-heading">刺客聂隐娘 <span class="feature-muted">剧情 / 武侠 / 古装</span></h2>
+                    <p>寂寞天宝后，巍巍大唐辉煌告终，朝廷的威严和向心力进一步削弱。此时藩镇林立，派系迭起，在四分五裂的乱
+                        象之下李氏帝国勉强维持着不堪一击的和平与威信。河北三镇之一的魏博镇，刚愎暴戾的节度使田季安（张震
+                        饰）野心勃勃，相机而动。会朝廷派神策兵讨伐王承宗，魏博主从各执一词，纷争连 连。与此同时，田季安自
+                        幼被公主道姑带到山上修炼剑法的表妹聂隐娘（舒淇 饰）满师归来。她谨遵师父教诲，奉行杀一人救万人的理
+                        念，接连手刃多位大僚，而此次归来则将狙击目标锁定在田季安身上...</p>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="forth-movie">
+            <div class="row feature">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <h2 class="feature-heading">夏洛特烦恼 <span class="feature-muted">喜剧 / 爱情</span></h2>
+                    <p>在学生时代的初恋秋雅（王智 饰）的婚礼上，毕业后吃软饭靠老婆养的夏洛（沈腾 饰）假充大款，出尽其丑，
+                        中间还被老婆马冬梅（马丽 饰）戳穿暴捶。混乱之中，夏洛意外穿越时空，回到了1997年的学生时代的课堂里。
+                        他懵懵懂懂，以为是场真实感极强的梦，于是痛揍王老师，强吻秋雅，还尝试跳楼让自己醒来。当受伤的他从
+                        病床上苏醒时，他意识到自己真的穿越了时空。既然有机会重新来过，那不如好好折腾一回...</p>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="fifth-movie">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h2 class="feature-heading">神探夏洛克 <span class="feature-muted">剧情 / 悬疑 / 犯罪</span></h2>
+                    <p>福尔摩斯回归原著维多利亚时代，调查一宗神秘的幽灵新娘谋杀案。Thomas Ricoletti惊讶地发现，几小时前自
+                        杀身亡的妻子Emelia Ricoletti身着旧婚纱再次出现了，她的幽灵带着强烈的复仇欲望在街上徘徊。从迷雾笼
+                        罩的莱姆豪斯到被废弃的教堂深处，福尔摩斯、华生以及他们的朋友不得不想尽办法对付这个“从坟墓里爬出
+                        来”的敌人，但最终的真相却出乎所有人的意料……</p>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="divider my-tabs">
+
+<footer class="my-tabs">
+    <span>© 2015 - 2016 赖某某</span>
+    <button class="btn btn-success pull-right" data-toggle="modal" data-target="#about">关于我</button>
+</footer>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="about">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">关于我</h4>
+            </div>
+            <div class="modal-body">
+                <img src="images/about.png">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">了解了</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $("#bs-example-navbar-collapse-1 .dropdown-menu a").click(function(){
+            var href = $(this).attr("href");
+            $("#tab-list a[href='"+href+"']").tab("show");
+        });
+    });
+</script>
+</body>
+</html>
