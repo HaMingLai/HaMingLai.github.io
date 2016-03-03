@@ -120,9 +120,9 @@ function prepareForMobile(){
 }
 
 function newgame() {
-    //初始化棋盘格
+    //initialization
     init();
-    //随机两个格子生成数字
+    //generate two number
     generateOneNumber();
     generateOneNumber();
 }
@@ -176,7 +176,7 @@ function updateBoardView() {
         }
 
     $(".number-cell").css("line-height",cellSideLength + "px");
-    $(".number-cell").css("font-size",0.6 * cellSideLength + "px");
+    $(".number-cell").css("font-size",0.45 * cellSideLength + "px");
 
 }
 
@@ -184,7 +184,7 @@ function generateOneNumber() {
     if (nospace(board))
         return false;
 
-    //随机�?个位�?
+    //random a position?
     var randx = parseInt(Math.floor(Math.random() * 4));
     var randy = parseInt(Math.floor(Math.random() * 4));
 
@@ -207,9 +207,9 @@ function generateOneNumber() {
                 }
             }
     }
-    //随机�?个数�?
+    //random a number?
     var randNumber = Math.random() < 0.5 ? 2 : 4;
-    //在随机位置显示随机数�?
+    //add the number to the position?
     board[randx][randy] = randNumber;
     showNumberWithAnimation(randx, randy, randNumber);
 
