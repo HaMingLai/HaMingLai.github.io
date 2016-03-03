@@ -52,6 +52,10 @@ document.addEventListener("touchstart",function(event){
     starty = event.touches[0].pageY;
 });
 
+document.addEventListener("touchmove",function(event){
+    event.preventDefault();
+});
+
 document.addEventListener("touchend",function(event){
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
@@ -180,7 +184,7 @@ function generateOneNumber() {
     if (nospace(board))
         return false;
 
-    //随机一个位置
+    //随机�?个位�?
     var randx = parseInt(Math.floor(Math.random() * 4));
     var randy = parseInt(Math.floor(Math.random() * 4));
 
@@ -203,9 +207,9 @@ function generateOneNumber() {
                 }
             }
     }
-    //随机一个数字
+    //随机�?个数�?
     var randNumber = Math.random() < 0.5 ? 2 : 4;
-    //在随机位置显示随机数字
+    //在随机位置显示随机数�?
     board[randx][randy] = randNumber;
     showNumberWithAnimation(randx, randy, randNumber);
 
