@@ -59,7 +59,7 @@ document.addEventListener("touchend",function(event){
     var deltax = endx - startx;
     var deltay = endy - starty;
 
-    if(Math.abs(deltax) < 0.2 * documentWidth && Math.abs(deltay) < 0.2 * documentWidth)
+    if(Math.abs(deltax) < 0.3 * documentWidth && Math.abs(deltay) < 0.3 * documentWidth)
         return;
 
     //x
@@ -143,7 +143,6 @@ function init() {
 
     updateBoardView();
     score = 0;
-    alert(documentWidth);
 }
 
 function updateBoardView() {
