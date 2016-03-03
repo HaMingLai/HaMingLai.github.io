@@ -116,9 +116,9 @@ function prepareForMobile(){
 }
 
 function newgame() {
-    //³õÊ¼»¯ÆåÅÌ¸ñ
+    //åˆå§‹åŒ–æ£‹ç›˜æ ¼
     init();
-    //Ëæ»úÁ½¸ö¸ñ×ÓÉú³ÉÊı×Ö
+    //éšæœºä¸¤ä¸ªæ ¼å­ç”Ÿæˆæ•°å­—
     generateOneNumber();
     generateOneNumber();
 }
@@ -143,6 +143,7 @@ function init() {
 
     updateBoardView();
     score = 0;
+    alert($(window).width()); //æµè§ˆå™¨å½“å‰çª—å£å¯è§†åŒºåŸŸå®½åº¦
 }
 
 function updateBoardView() {
@@ -180,7 +181,7 @@ function generateOneNumber() {
     if (nospace(board))
         return false;
 
-    //Ëæ»úÒ»¸öÎ»ÖÃ
+    //éšæœºä¸€ä¸ªä½ç½®
     var randx = parseInt(Math.floor(Math.random() * 4));
     var randy = parseInt(Math.floor(Math.random() * 4));
 
@@ -203,9 +204,9 @@ function generateOneNumber() {
                 }
             }
     }
-    //Ëæ»úÒ»¸öÊı×Ö
+    //éšæœºä¸€ä¸ªæ•°å­—
     var randNumber = Math.random() < 0.5 ? 2 : 4;
-    //ÔÚËæ»úÎ»ÖÃÏÔÊ¾Ëæ»úÊı×Ö
+    //åœ¨éšæœºä½ç½®æ˜¾ç¤ºéšæœºæ•°å­—
     board[randx][randy] = randNumber;
     showNumberWithAnimation(randx, randy, randNumber);
 
