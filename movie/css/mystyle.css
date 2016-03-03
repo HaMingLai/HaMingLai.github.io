@@ -1,0 +1,33 @@
+body{
+    padding: 50px 0;
+}
+.navbar-brand{
+    padding: 0;
+}
+.demo-box{
+    background-color: #434343;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+.my-tabs{
+    width: 80%;
+    margin: 0 auto;
+}
+.feature{
+
+}
+.feature .feature-heading{
+    font-size: 30px;
+    color: #016a94;
+}
+.feature .feature-muted{
+    font-size: 10px;
+    color: #999;
+}
+footer{
+    padding: 10px 0;
+}
+footer span{
+    height: 34px;
+    line-height: 34px;
+}
