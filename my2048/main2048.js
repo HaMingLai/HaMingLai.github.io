@@ -143,7 +143,6 @@ function init() {
 
     updateBoardView();
     score = 0;
-    alert($(window).width()); //浏览器当前窗口可视区域宽度
 }
 
 function updateBoardView() {
