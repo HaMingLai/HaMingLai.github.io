@@ -143,6 +143,7 @@ function init() {
 
     updateBoardView();
     score = 0;
+    alert(documentWidth);
 }
 
 function updateBoardView() {
