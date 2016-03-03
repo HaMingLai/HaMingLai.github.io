@@ -1,4 +1,4 @@
-documentWidth = window.screen.width;
+documentWidth = $(window).width();
 gridContainerWidth = 0.92 * documentWidth;
 cellSideLength = 0.18 * documentWidth;
 cellSpace = 0.04 * documentWidth;
