@@ -1,9 +1,8 @@
 function showNumberWithAnimation(i,j,randNumber){
     var numberCell = $("#number-cell-"+i+"-"+j);
+    var pictureCell = $("#picture-cell-"+i+"-"+j);
 
-    numberCell.css("background-color",getNumberBackgroundColor(board[i][j]));
-    numberCell.css("color",getNumberColor(board[i][j]));
-    numberCell.text(board[i][j]);
+    pictureCell.attr("src",getPicture(board[i][j]));
 
     numberCell.animate({
         width: cellSideLength,

@@ -7,57 +7,44 @@ function getPos(num) {
     return cellSpace + num * (cellSideLength + cellSpace);
 }
 
-function getNumberBackgroundColor(number) {
+function getPicture(number) {
     switch (number) {
         case 2:
-            return "#eee4da";
+            return "images/1.png";
             break;
         case 4:
-            return "#ede0c8";
+            return "images/5.png";
             break;
         case 8:
-            return "#f2b179";
+            return "images/10.png";
             break;
         case 16:
-            return "#f59563";
+            return "images/20.png";
             break;
         case 32:
-            return "#f67c54";
+            return "images/50.png";
             break;
         case 64:
-            return "#f65e3b";
+            return "images/100.png";
             break;
         case 128:
-            return "#edcf72";
+            return "images/watch.png";
             break;
         case 256:
-            return "#edcc61";
+            return "images/mobile.png";
             break;
         case 512:
-            return "#9c0";
+            return "images/notebook.png";
             break;
         case 1024:
-            return "#33b5e5";
+            return "images/car.png";
             break;
         case 2048:
-            return "#09c";
-            break;
-        case 4096:
-            return "#a6c";
-            break;
-        case 8192:
-            return "#93c";
+            return "images/house.png";
             break;
     }
 
     return "black";
-}
-
-function getNumberColor(number) {
-    if (number <= 4)
-        return "#776e65";
-
-    return "#fff";
 }
 
 function nospace(board) {

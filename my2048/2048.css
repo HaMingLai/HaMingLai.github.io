@@ -58,10 +58,14 @@ header p{
 
 .number-cell{
     border-radius: 6px;
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 46px;
-    line-height: 100px;
-    text-align: center;
     position: absolute;
+}
+
+.footer{
+    width: 30%;
+    margin: 30px auto;
+    font-family: Arial;
+    font-size:10px;
+    line-height: 10px;
+    text-align: center;
 }

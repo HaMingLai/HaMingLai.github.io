@@ -147,6 +147,7 @@ function init() {
 
     updateBoardView();
     score = 0;
+    updateScore(score);
 }
 
 function updateBoardView() {
@@ -155,6 +156,10 @@ function updateBoardView() {
         for (var j = 0; j < 4; j++) {
             $("#grid-container").append('<div class="number-cell" id="number-cell-' + i + '-' + j + '"></div>');
             var theNumberCell = $("#number-cell-" + i + "-" + j);
+            theNumberCell.append('<img class="picture-cell" id="picture-cell-'+ i + '-' + j +'" />');
+            var thePictureCell = $("#picture-cell-" + i + "-" + j);
+            thePictureCell.css("width", "100%");
+            thePictureCell.css("height", "100%");
 
             if (board[i][j] == 0) {
                 theNumberCell.css("width", "0px");
@@ -167,9 +172,7 @@ function updateBoardView() {
                 theNumberCell.css("height", cellSideLength);
                 theNumberCell.css("top", getPos(i));
                 theNumberCell.css("left", getPos(j))
-                theNumberCell.css("background-color", getNumberBackgroundColor(board[i][j]));
-                theNumberCell.css("color", getNumberColor(board[i][j]));
-                theNumberCell.text(board[i][j]);
+                thePictureCell.attr("src",getPicture(board[i][j]));
             }
 
             hasConflicted[i][j] = false;
@@ -184,7 +187,7 @@ function generateOneNumber() {
     if (nospace(board))
         return false;
 
-    //random a position?
+    //random a position
     var randx = parseInt(Math.floor(Math.random() * 4));
     var randy = parseInt(Math.floor(Math.random() * 4));
 
@@ -207,9 +210,9 @@ function generateOneNumber() {
                 }
             }
     }
-    //random a number?
+    //random a number
     var randNumber = Math.random() < 0.5 ? 2 : 4;
-    //add the number to the position?
+    //add the number to the position
     board[randx][randy] = randNumber;
     showNumberWithAnimation(randx, randy, randNumber);
 
