@@ -1,4 +1,4 @@
-var canvasWidth = Math.min(800, $(window).width() - 20);
+var canvasWidth = Math.min(560, $(window).width() - 20);
 var canvasHeight = canvasWidth;
 var isMouseDown = false;
 var lastLoc = {x: 0, y: 0};
